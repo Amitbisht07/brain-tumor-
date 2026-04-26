@@ -1,6 +1,6 @@
 # Brain Tumor Detection using Deep Learning
 
-An AI-powered web application that detects brain tumors from MRI scans using a Convolutional Neural Network (CNN). Built with Python, TensorFlow/Keras, and deployed using Streamlit for an easy-to-use interface.
+An AI-powered web application that detects brain tumors from MRI scans using a  EfficientNet deep learning model. Built with Python, TensorFlow/Keras, and deployed using Streamlit for an easy-to-use interface.
 
 # Features
 
@@ -25,7 +25,7 @@ An AI-powered web application that detects brain tumors from MRI scans using a C
 ```bash
 brain-tumor/
 │── app.py                 # Streamlit frontend
-│── model.h5              # Trained CNN model
+│── model.h5              # Trained  EfficientNet model
 │── dataset/              # MRI image dataset
 │── notebooks/            # Training notebooks
 │── requirements.txt      # Dependencies
