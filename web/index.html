@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-page="dashboard">
+<head>
+  <meta charset="UTF-8">
+  <title>Brain Tumor Diagnosis Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <div id="sideMenu" class="side-menu">
+    <a href="index.html" class="active">Dashboard</a>
+    <a href="history.html">Patient History</a>
+    <a href="#" id="logoutBtn" onclick="logout()">Logout</a>
+  </div>
+
+  <div class="center-wrapper">
+    <div class="dashboard-card">
+      <h1 class="title">Brain Tumor Diagnosis Portal</h1>
+
+      <div class="form-section">
+        <h2>Patient Information</h2>
+
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="name" placeholder="Enter patient name">
+        </div>
+
+        <div class="form-group">
+          <label>Age</label>
+          <input type="number" id="age" placeholder="Enter age">
+        </div>
+
+        <div class="form-group">
+          <label>Gender</label>
+          <select id="gender">
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Notes</label>
+          <textarea id="notes" placeholder="Any symptoms or remarks..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Upload MRI Image</label>
+          <input type="file" id="imageUpload">
+        </div>
+
+        <button class="btn-primary" onclick="submitForm()">Submit & Predict</button>
+      </div>
+
+      <div class="prediction-section">
+        <h2>AI Diagnosis</h2>
+        <div id="loading" class="loading hidden">Analyzing MRI...</div>
+        <div id="result" class="result-box">Awaiting prediction...</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById("sideMenu").classList.toggle("open");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const token = localStorage.getItem("jwt");
+      if (!token) {
+        alert("Please login first.");
+        window.location.href = "login.html";
+      }
+    });
+  </script>
+</body>
+</html>

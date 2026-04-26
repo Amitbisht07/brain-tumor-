@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-page="history">
+<head>
+  <meta charset="UTF-8">
+  <title>Patient History • Brain Tumor Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <div id="sideMenu" class="side-menu">
+    <a href="index.html">Dashboard</a>
+    <a href="history.html" class="active">Patient History</a>
+    <a href="#" id="logoutBtn" onclick="logout()">Logout</a>
+  </div>
+
+  <div class="center-wrapper">
+    <div class="dashboard-card">
+      <h1 class="title">🩺 Patient History</h1>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Prediction</th>
+            <th>Confidence</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody id="historyBody">
+          <tr><td colspan="6">Loading...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="history.js"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById("sideMenu").classList.toggle("open");
+    }
+  </script>
+</body>
+</html>

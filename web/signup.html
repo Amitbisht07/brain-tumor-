@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-page="signup">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Account • Brain Tumor Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-body">
+  <div class="auth-container">
+    <!-- Left Illustration -->
+    <div class="auth-left">
+      <div class="left-content">
+        <img src="https://cdn-icons-png.flaticon.com/512/10021/10021636.png"
+             class="auth-illustration" alt="Medical Illustration">
+        <h1 class="left-welcome">Join Us</h1>
+      </div>
+    </div>
+
+    <!-- Right Signup Form -->
+    <div class="auth-right">
+      <h1 class="auth-title auth-title-top">Create Account</h1>
+      <p class="auth-sub auth-sub-top">Fill the details to get started</p>
+
+      <form id="signupForm" class="auth-form" onsubmit="return doSignup(event)">
+        <label>Full Name</label>
+        <input type="text" id="name" required>
+
+        <label>Email</label>
+        <input type="email" id="email" required>
+
+        <label>Password</label>
+        <input type="password" id="password" required>
+
+        <button class="btn-primary">Create Account</button>
+
+        <p class="auth-alt">
+          Already have an account? <a href="login.html">Login here</a>
+        </p>
+
+        <p id="authMsg" class="auth-msg"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

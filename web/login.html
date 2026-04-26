@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Brain Tumor Diagnosis Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <!-- Left panel -->
+      <div class="auth-left">
+        <div class="auth-logo-circle">
+          <!-- Put your logo/img here if you want -->
+          <span class="auth-logo-text">🧠</span>
+        </div>
+        <h1 class="auth-title">Welcome Back</h1>
+        <p class="auth-text">
+          Sign in to access the Brain Tumor Diagnosis Portal and manage patient scans,
+          predictions, and reports from one place.
+        </p>
+      </div>
+
+      <!-- Right panel -->
+      <div class="auth-right">
+        <h2 class="auth-right-title">Sign in to continue</h2>
+
+        <form id="loginForm" class="auth-form" onsubmit="return false;">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              autocomplete="email"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+            >
+          </div>
+
+          <button
+            type="submit"
+            class="btn-primary auth-btn"
+            onclick="login()"  <!-- keep whatever your JS already uses -->
+          >
+            Sign In
+          </button>
+
+          <p class="auth-footer-text">
+            Don’t have an account?
+            <a href="register.html" class="auth-link">Create account</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
